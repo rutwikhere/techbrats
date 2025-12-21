@@ -267,19 +267,17 @@
       display: none;
     }
   }
-  .kritun-link {
-    color: var(--gold-soft);
-    text-decoration: none;
-  }
-  
-  .kritun-link:hover {
-    text-decoration: underline;
-  }
+ 
 
     /* Remove underline from clickable cards */
-.card-link {
-  text-decoration: none;
+/* Make card-link behave like a block, not text */
+a.card.card-link {
+  display: block;
+  text-decoration: none !important;
   color: inherit;
+}
+a.card.card-link * {
+  text-decoration: none !important;
 }
 
 /* Safety: also remove underline from text inside */
@@ -288,3 +286,4 @@
 .card-link span {
   text-decoration: none;
 }
+
