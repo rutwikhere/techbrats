@@ -1,0 +1,278 @@
+/* =========================
+   COLOR SYSTEM (LOGO MATCH)
+   ========================= */
+   :root {
+    --gold-primary: #C9A24D;
+    --gold-soft: #E6C77A;
+    --gold-muted: #9E8438;
+  
+    --black-main: #0B0B0B;
+    --black-soft: #121212;
+  
+    --text-main: #F2EFEA;
+    --text-muted: #B7B2A6;
+  }
+  
+  /* =========================
+     GLOBAL
+     ========================= */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background: var(--black-main);
+    color: var(--text-main);
+    line-height: 1.6;
+  }
+  
+  /* =========================
+     NAVBAR
+     ========================= */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    position: sticky;
+    top: 0;
+    background: rgba(11,11,11,0.85);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--gold-primary);
+  }
+  
+  .logo img {
+    height: 36px;
+    filter: drop-shadow(0 0 6px rgba(201,162,77,0.35));
+  }
+  
+  nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: var(--text-muted);
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: var(--gold-soft);
+  }
+  
+  /* =========================
+     HERO
+     ========================= */
+  .hero {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  .hero span {
+    color: var(--gold-primary);
+  }
+  
+  .hero p {
+    margin: 20px 0;
+    color: var(--text-muted);
+    max-width: 700px;
+  }
+  
+  /* =========================
+     BUTTON
+     ========================= */
+  .btn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    background: transparent;
+    color: var(--gold-primary);
+    border: 1px solid var(--gold-primary);
+    border-radius: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    background: var(--gold-primary);
+    color: var(--black-main);
+    box-shadow: 0 0 25px rgba(201,162,77,0.4);
+  }
+  
+  /* =========================
+     SECTIONS
+     ========================= */
+  .section {
+    padding: 80px 10%;
+    text-align: center;
+  }
+  
+  .section h2 {
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    color: var(--gold-primary);
+  }
+  
+  .section p {
+    max-width: 800px;
+    margin: auto;
+    color: var(--text-muted);
+  }
+  
+  .dark {
+    background: var(--black-soft);
+  }
+  
+  /* =========================
+     PROJECT CARDS
+     ========================= */
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  .card {
+    background: #161616;
+    padding: 30px;
+    border-radius: 16px;
+    transition: all 0.4s ease;
+    border-left: 2px solid var(--gold-muted);
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    border-left-color: var(--gold-primary);
+    box-shadow: 0 0 30px rgba(201,162,77,0.12);
+  }
+  
+  .card h3 {
+    color: var(--gold-soft);
+    margin-bottom: 10px;
+  }
+  
+  .card p {
+    color: var(--text-muted);
+  }
+  
+  .tag {
+    display: inline-block;
+    margin-top: 15px;
+    font-size: 12px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: rgba(201,162,77,0.12);
+    color: var(--gold-soft);
+  }
+  
+  /* =========================
+     TEAM SECTION
+     ========================= */
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .team-card {
+    background: #161616;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #222;
+    transition: all 0.4s ease;
+  }
+  
+  .team-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold-muted);
+    box-shadow: 0 0 25px rgba(201,162,77,0.12);
+  }
+  
+  .team-card h3 {
+    color: var(--gold-soft);
+    margin-bottom: 8px;
+    font-size: 1.4rem;
+  }
+  
+  .team-card .enroll {
+    font-size: 13px;
+    color: var(--gold-muted);
+    margin-bottom: 10px;
+  }
+  
+  .team-card .college {
+    font-size: 14px;
+    color: var(--text-muted);
+  }
+  
+  /* =========================
+     FOOTER
+     ========================= */
+  footer {
+    padding: 30px;
+    text-align: center;
+    background: #000;
+    color: #8E887D;
+    font-size: 14px;
+  }
+  
+  /* =========================
+     ANIMATIONS
+     ========================= */
+  .fade-in {
+    animation: fadeUp 1s ease forwards;
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* =========================
+     RESPONSIVE
+     ========================= */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.2rem;
+    }
+    nav {
+      display: none;
+    }
+  }
+  .kritun-link {
+    color: var(--gold-soft);
+    text-decoration: none;
+  }
+  
+  .kritun-link:hover {
+    text-decoration: underline;
+  }
+    
