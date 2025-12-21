@@ -275,4 +275,16 @@
   .kritun-link:hover {
     text-decoration: underline;
   }
-    
+
+    /* Remove underline from clickable cards */
+.card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Safety: also remove underline from text inside */
+.card-link h3,
+.card-link p,
+.card-link span {
+  text-decoration: none;
+}
