@@ -8,6 +8,25 @@
   padding: 100px 10%;
   align-items: center;
 }
+/* =========================
+   GOOGLE PLAY BUTTON
+   ========================= */
+
+.playstore-btn {
+  display: inline-block;
+  margin-top: 24px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.playstore-btn img {
+  height: 56px;
+  width: auto;
+}
+
+.playstore-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
 
 .kritun-left h2 {
   color: var(--gold-primary);
@@ -259,4 +278,5 @@
       height: 500px;
     }
   }
+
     
